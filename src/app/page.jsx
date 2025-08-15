@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import styles from './page.module.css';
 
 
@@ -11,7 +13,22 @@ import styles from './page.module.css';
           <small>texto menor</small>
             <br />
           <div className="quadrado"></div>
+
+
+            <Image 
+            src={'/temp/arvore.jpg'}
+            alt="Árvore"
+            width={130}
+            height={90}
+            />
+
+            <Image
+            src={'/temp/arvorePequena.jpg'}
+            alt="Árvore pequena"
+            width={1300}
+            height={900}/>
           </div>
+          
           
         );
       }
