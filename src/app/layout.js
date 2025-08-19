@@ -2,6 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/reset.css";
 import "../styles/globals.css";
 
+import Cabecalho from "@/componentes/cabecalho";
+import Rodape from "@/componentes/rodape";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -13,15 +16,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BBG",
-  description: "Site de skin",
+  title: "BatataWay",
+  description: "Gerenciamento de batata",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Cabecalho />
         {children}
+        <Rodape />
       </body>
     </html>
   );
